@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2 class="logo">Jeter's Portfolio</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+      <i class='bx bx-moon'></i>
+    </button>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Greetings!</h1>
+    <h2>I'm Jeter</h2>
+    <h3>Computer Science Student</h3>
+
+    <div class="buttons">
+      <button class="primary" onclick="openProjectForm()">Got a project?</button>
+      <button class="secondary" onclick="openResume()">My Resume</button>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="pictures/jeterpic.png" alt="Profile">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  
+  <div class="about-content">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="pictures/aboutme1.jpg" alt="About Me 1" class="carousel-slide active">
+        <img src="pictures/aboutme2.jpg" alt="About Me 2" class="carousel-slide">
+        <img src="pictures/aboutme3.jpg" alt="About Me 3" class="carousel-slide">
+        <img src="pictures/aboutme4.jpg" alt="About Me 4" class="carousel-slide">
+        <img src="pictures/aboutme5.jpg" alt="About Me 5" class="carousel-slide">
+        <img src="pictures/aboutme6.jpg" alt="About Me 6" class="carousel-slide">
+        <img src="pictures/aboutme7.jpg" alt="About Me 7" class="carousel-slide">
+        <img src="pictures/aboutme8.jpg" alt="About Me 8" class="carousel-slide">
+        <img src="pictures/aboutme9.jpg" alt="About Me 9" class="carousel-slide">
+      </div>
+      
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="prevSlide()">❮</button>
+        <div class="carousel-dots">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+          <span class="dot" onclick="goToSlide(3)"></span>
+          <span class="dot" onclick="goToSlide(4)"></span>
+          <span class="dot" onclick="goToSlide(5)"></span>
+          <span class="dot" onclick="goToSlide(6)"></span>
+          <span class="dot" onclick="goToSlide(7)"></span>
+          <span class="dot" onclick="goToSlide(8)"></span>
+        </div>
+        <button class="carousel-btn" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+
+    <div class="about-details">
+      <p>
+        Currently Graduated Senior High School From Tapinac Senior High School.
+        Recently the innovation Team Leader of Tapinac Robotics Club
+      </p>
+      
+      <div class="details-box">
+        <h3>About the Gallery</h3>
+        <p>This gallery showcases my journey, achievements, and memorable moments from competitions, training sessions, and collaborative projects with the robotics club.</p>
+        <ul>
+          <li><i class='bx bx-book'></i> Academic Excellence</li>
+          <li><i class='bx bx-bot'></i> Robotics Innovation</li>
+          <li><i class='bx bx-trophy'></i> Competition Success</li>
+          <li><i class='bx bx-group'></i> Team Leadership</li>
+        </ul>
+      </div>
+
+      <div class="achievements-in-about">
+        <h3><i class='bx bx-award'></i> Achievements & Awards</h3>
+        <button class="achievements-btn" onclick="openAchievements()">View All Achievements</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><h3>20+</h3><p>Projects</p></div>
+    <div><h3>95%</h3><p>Customer Satisfaction</p></div>
+    <div><h3>4+</h3><p>Years of Experience</p></div>
+  </div>
+
+  <div class="experience">
+    <h3>Technical Skills & Experience</h3>  
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class='bx bx-code skill-icon'></i>
+        <h4>Web Development</h4>
+        <div class="skill-items">
+          <p><i class='bx bxl-html5'></i> HTML</p>
+          <p><i class='bx bxl-css3'></i> CSS</p>
+          <p><i class='bx bxl-javascript'></i> JavaScript</p>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class='bx bx-microchip skill-icon'></i>
+        <h4>Embedded Systems</h4>
+        <div class="skill-items">
+          <p><i class='bx bx-infinite'></i> Arduino IDE</p>
+          <p><i class='bx bx-plus'></i> C++</p>
+          <p><i class='bx bx-microchip'></i> ESP32 Programming</p>
+          <p><i class='bx bx-chip'></i> Microcontroller Development</p>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <i class='bx bx-bot skill-icon'></i>
+        <h4>Robotics & Innovation</h4>
+        <div class="skill-items">
+          <p><i class='bx bx-group'></i>Schematic and Wiring Diagram</p>
+          <p><i class='bx bx-bulb'></i>Innovation Ideas</p>
+          <p><i class='bx bx-target-lock'></i>Hardware and Software Integration</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card" onclick="openProject(2)">
+      <img src="pictures/medicare.jpg" alt="Medicare Project">
+      <div class="project-overlay">
+        <h3>Medicare</h3>
+        <p>View Project</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(0)">
+      <img src="pictures/climitigate.jpg" alt="ClimitiGate Project">
+      <div class="project-overlay">
+        <h3>ClimitiGate</h3>
+        <p>View Project</p>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openProject(1)">
+      <img src="pictures/ethmo.png" alt="Ethmo Project">
+      <div class="project-overlay">
+        <h3>Ethmo</h3>
+        <p>View Project</p>
+      </div>
+    </div> 
+  </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section class="certifications-section" id="certifications">
+  <h2>Certifications</h2>
+  <div class="certs-grid">
+
+    <div class="cert-card" onclick="openCert('pictures/cert1.png', 'Regional Science Technology Fair 2025', 'DepED Region III · December 16, 2025')">
+      <div class="cert-img-wrap">
+        <img src="pictures/cert1.png" alt="Certification 1">
+        <div class="cert-img-overlay"><i class='bx bx-zoom-in'></i></div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">Regional Science Technology Fair 2025</div>
+        <div class="cert-issuer">DepED Region III</div>
+        <div class="cert-date">December 16, 2025</div>
+        <span class="cert-badge">Competition</span>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openCert('pictures/cert2.png', 'Regional Educators Youth Summit 2025', 'DepED Region III · December 18, 2025')">
+      <div class="cert-img-wrap">
+        <img src="pictures/cert2.png" alt="Certification 2">
+        <div class="cert-img-overlay"><i class='bx bx-zoom-in'></i></div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">Regional Educators Youth Summit 2025</div>
+        <div class="cert-issuer">DepED Region III</div>
+        <div class="cert-date">December 18, 2025</div>
+        <span class="cert-badge blue">Seminar</span>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openCert('pictures/cert3.png', 'Tarlac Governors Robotics Cup', 'Hon. Christian Yap · February, 2025')">
+      <div class="cert-img-wrap">
+        <img src="pictures/cert3.png" alt="Certification 3">
+        <div class="cert-img-overlay"><i class='bx bx-zoom-in'></i></div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">Tarlac Governor's Robotics Cup</div>
+        <div class="cert-issuer">Hon. Christian Yap</div>
+        <div class="cert-date">February, 2025</div>
+        <span class="cert-badge green">Verified</span>
+      </div>
+    </div>
+
+    <div class="cert-card" onclick="openCert('pictures/cert4.png', 'JLGIS Training and Benchmarking', 'James L. Gordon Integrated School Olongapo City · February, 2025')">
+      <div class="cert-img-wrap">
+        <img src="pictures/cert4.png" alt="Certification 4">
+        <div class="cert-img-overlay"><i class='bx bx-zoom-in'></i></div>
+      </div>
+      <div class="cert-info">
+        <div class="cert-name">JLGIS Training and Benchmarking</div>
+        <div class="cert-issuer">James L. Gordon Integrated School Olongapo City</div>
+        <div class="cert-date">February, 2025</div>
+        <span class="cert-badge green">Verified</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Cert Lightbox Modal -->
+<div id="certModal" class="modal">
+  <div class="modal-cert-content">
+    <span class="close" onclick="closeCert()">&times;</span>
+    <img id="certModalImg" src="" alt="Certificate">
+    <div class="cert-modal-info">
+      <h3 id="certModalTitle"></h3>
+      <p id="certModalIssuer"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project Details -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProject()">&times;</span>
+    <img id="modalImg" src="" alt="Project">
+    <div class="modal-details">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-tags" id="modalTags"></div>
+      <button class="modal-button">Visit Project</button>
+    
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Project Inquiry Form -->
+<div id="projectFormModal" class="modal">
+  <div class="modal-form-content">
+    <span class="close" onclick="closeProjectForm()">&times;</span>
+    <h2>Project Inquiry Form</h2>
+    <p class="form-subtitle">Fill in the details below and I'll get back to you soon!</p>
+    
+    <form id="projectForm" class="project-form">
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="your@email.com">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Your Full Name">
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age <span class="required">*</span></label>
+          <input type="number" id="age" name="age" required placeholder="Your Age" min="1" max="120">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number <span class="required">*</span></label>
+        <input type="tel" id="contact" name="contact" required placeholder="+63 9XX XXX XXXX">
+      </div>
+
+      <div class="form-group">
+        <label for="school">School <span class="required">*</span></label>
+        <input type="text" id="school" name="school" required placeholder="Name of Your School">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="schoolLevel">School Level <span class="required">*</span></label>
+          <select id="schoolLevel" name="schoolLevel" required>
+            <option value="">Select School Level</option>
+            <option value="Elementary">Elementary</option>
+            <option value="Junior High School">Junior High School</option>
+            <option value="Senior High School">Senior High School</option>
+            <option value="College">College</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="projectType">Type of Project <span class="required">*</span></label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Select Project Type</option>
+            <option value="Research Writing">Research Writing</option>
+            <option value="Product Development">Product Development</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Hardware Development">Hardware Development</option>
+            <option value="Project Inquiries">Project Inquiries</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit-btn">Submit Inquiry</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal for Project Details -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProject()">&times;</span>
+    <img id="modalImg" src="" alt="Project">
+    <div class="modal-details">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-tags" id="modalTags"></div>
+      <button class="modal-button">Visit Project</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Achievements -->
+<div id="achievementsModal" class="modal">
+  <div class="modal-achievements-content">
+    <span class="close" onclick="closeAchievements()">&times;</span>
+    
+    <div class="achievements-container">
+      <div class="achievement-category">
+        <h3><i class='bx bx-award'></i> Academic Achievements</h3>
+        <ul>
+          <li>With Honors S.Y. 2025-2026 Grade 12</li>
+          <li>Outstanding Performance in Science</li>
+          <li>Outstanding Performance in Innovation</li>
+          <li>Outstanding Performance in Research</li>
+          <li>SIGMA/Science Club Recipient Meritorious Award</li>
+        </ul>
+      </div>
+
+      <div class="achievement-category">
+        <h3><i class='bx bx-trophy'></i> Competition Awards</h3>
+        
+        <h4>School Level</h4>
+        <ul>
+          <li><i class='bx bx-medal'></i> Science Month Science Investigatory Project (Project EcoPoints) - 1st runner up</li>
+        </ul>
+
+        <h4>Division Level</h4>
+        <ul>
+          <li><i class='bx bx-medal'></i> Division Research Congress 2025 (Capstone Category) - 3rd place Best in Display Board</li>
+          <li><i class='bx bx-medal'></i> Division Research Congress 2025 (Capstone Category) - 3rd place Best in Manuscript</li>
+          <li><i class='bx bx-award'></i> 7th Olongapo City Robotics Cup (Future Innovators Category) - 3rd Runner up</li>
+          <li><i class='bx bx-medal'></i> 8th Olongapo City Robotics Cup (Future Innovators Category) - 2nd Runner up</li>
+          <li><i class='bx bx-medal'></i> Gordon College, College of Computer Studies 11th IT Olympiad (Quiz Bee Battleship Category) - 3rd place</li>
+          <li><i class='bx bx-medal'></i> Gordon College, College of Computer Studies 12th IT Olympiad (Quiz Bee Battleship Category) - 3rd place</li>
+        </ul>
+
+        <h4>Regional Level</h4>
+        <ul>
+          <li><i class='bx bx-award'></i> Regional Science Technology Fair (Robotics and Intelligent Machines Category) - 4th Place</li>
+        </ul>
+
+        <h4>National Level</h4>
+        <ul>
+          <li><i class='bx bx-award'></i> Philippine Robotics Olympiad (Future Innovators Category) - Finalist</li>
+          <li><i class='bx bx-award'></i> Philippine Robotics Olympiad (Future Innovators Category) - 9th Place in Presentation</li>
+          <li><i class='bx bx-medal'></i> Tarlac Robotics Governor's Cup - 1st runner up</li>
+          <li><i class='bx bx-award'></i> National Robotics Competition 2024 - Participant</li>
+        </ul>
+      </div>
+
+      <div class="achievement-category">
+        <h3><i class='bx bx-group'></i> Appearances & Leadership</h3>
+        <ul>
+          <li>JLGIS ROBOTICS TRAINING AND BENCHMARKING PROJECT RISEN - Technical Working Group</li>
+          <li>JLGIS ROBOTICS TRAINING AND BENCHMARKING PROJECT RISEN 2.0 - Technical Working Group</li>
+          <li>OCNHS Robotics Club Training 2025</li>
+          <li>Division Research Congress 2026 - Head Technical Working Group</li>
+          <li>Regional Youth Educators Summit at Baler, Aurora 2025</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="contacts" id="contacts">
+  <h2>Get in Touch</h2>
+  <p>Feel free to reach out to me for any inquiries or collaboration opportunities!</p>
+  <div class="contact-links">
+    <button class="contact-btn" onclick="openContacts()">
+      <i class='bx bx-envelope'></i> Email
+    </button>
+    <button class="contact-btn" onclick="openContacts()">
+      <i class='bx bx-phone'></i> Phone
+    </button>
+    <button class="contact-btn" onclick="openContacts()">
+      <i class='bx bxl-facebook'></i> Facebook
+    </button>
+    <button class="contact-btn" onclick="openContacts()">
+      <i class='bx bxl-github'></i> GitHub
+    </button>
+  </div>
+</section>
+
+<!-- Modal for Contacts -->
+<div id="contactsModal" class="modal">
+  <div class="modal-contacts-content">
+    <span class="close" onclick="closeContacts()">&times;</span>
+    
+    <div class="contacts-container">
+      <h2>Contact Information</h2>
+      
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class='bx bx-envelope'></i>
+        </div>
+        <h3>Email</h3>
+        <p>corpusjet73@gmail.com</p>
+        <a href="mailto:corpusjet73@gmail.com" class="contact-link-btn">Send Email</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class='bx bx-phone'></i>
+        </div>
+        <h3>Phone</h3>
+        <p>+63 961 711 7890 </p>
+        <a href="tel:+639617117890" class="contact-link-btn">Call Now</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class='bx bxl-facebook'></i>
+        </div>
+        <h3>Facebook</h3>
+        <p>Connect with me on Facebook</p>
+        <a href="https://www.facebook.com/jeterkenzi.corpus" target="_blank" class="contact-link-btn">Visit Facebook</a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class='bx bxl-github'></i>
+        </div>
+        <h3>GitHub</h3>
+        <p>View my projects on GitHub</p>
+        <a href="https://github.com/JitteruKun/" target="_blank" class="contact-link-btn">Visit GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
