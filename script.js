@@ -85,7 +85,7 @@ const projects = [
     image: "pictures/ethmo.png",
     description: "An ethnography research platform...",
     tags: ["Research", "SaaS", "Collaboration"],
-    link: "ethmo.html"
+    link: "Ethmo/ethmo.html"
   },
   {
     title: "Medicare",
